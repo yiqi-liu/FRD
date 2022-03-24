@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Fast routine to calculate conditional variance based on...</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for sigma2.NN {FRD}"><tr><td>sigma2.NN {FRD}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Fast routine to calculate conditional variance based on nearest neighbours based on linear regression.</h2>
+
+<h3>Description</h3>
+
+<p>Fast routine to calculate conditional variance based on nearest neighbours based on linear regression.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+sigma2.NN(x, d, y, R = 5, type = "regression NN")
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Running variable. Note that the entries of this vector have to be sorted.</p>
+</td></tr>
+<tr valign="top"><td><code>d</code></td>
+<td>
+<p>Treatment status.</p>
+</td></tr>
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>Outcome variable.</p>
+</td></tr>
+<tr valign="top"><td><code>R</code></td>
+<td>
+<p>Number of neares neighbours to use. Default is 5.</p>
+</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+<p>Either &quot;regression NN&quot; calculates variance based on local linear projections of R-nearest neighbours
+or &quot;mean NN&quot; calculates conditional variance based on mean of R-nearest neighbours.</p>
+</td></tr>
+</table>
+
+
+<h3>Details</h3>
+
+<p>This function calculates local conditional variances. 
+The output is a nx4 matrix. The first column equals$\sigma_y^2$,
+the second and third columns $\sigma_YT$ and the forth column $\sigma_T^2$
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>FRD</em> version 1.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

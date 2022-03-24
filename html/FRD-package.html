@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Confidence Sets for fuzzy regression discontinuity designs</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for FRD-package {FRD}"><tr><td>FRD-package {FRD}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2> 
+Confidence Sets for fuzzy regression discontinuity designs
+</h2>
+
+<h3>Description</h3>
+
+<p>This package provides a function to calculate bias-aware Anderson Rubin-type  confidence intervals for the parameter of interest in fuzzy regression discontinuity designs. You can find a description of this function in Noack and Rothe (2020). 
+</p>
+
+
+<h3>Details</h3>
+
+<p>The package includes the fuction FRD to calculate the confidence sets. 
+</p>
+
+
+<h3>Author(s)</h3>
+
+<p>Claudia Noack &lt;cnoack@mail.uni-mannheim.de&gt;
+Christoph Rothe &lt;crothe@mail.uni-mannheim.de&gt;
+</p>
+
+
+<h3>References</h3>
+
+<p>Noack, C., &amp; Rothe, C. (2020). Bias-aware inference in fuzzy regression discontinuity designs.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+  ## Not run: 
+    FRD(y=rnorm(100), d=rbinom(n=100, size=1, prob=0.5), x=rnorm(100), search.int=c(-1000,1000)) 
+  
+## End(Not run)
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>FRD</em> version 1.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>

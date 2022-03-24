@@ -1,0 +1,16 @@
+Package: FRD
+Type: Package
+Title: Confidence sets in fuzzy regression discontinuity designs
+Version: 1.0.1
+Date: 2020-05-25
+Author: Claudia Noack and Christoph Rothe
+Maintainer: <cnoack@mail.uni-mannheim.com>
+Description: FRD is a function to calculate bias-aware Anderson-Rubin-type confidence intervals for the parameter of interest in fuzzy regression discontinuity designs. A description of this function can be found in Noack and Rothe (2020). 
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.4), RDHonest
+LinkingTo: Rcpp
+RoxygenNote: 7.1.1
+Encoding: UTF-8
+Suggests: testthat
+Built: R 4.0.3; x86_64-w64-mingw32; 2020-11-12 15:50:07 UTC; windows
+Archs: i386, x64

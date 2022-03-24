@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Bias-Aware Anderson-Rubin Confidence Sets</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for FRD {FRD}"><tr><td>FRD {FRD}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Bias-Aware Anderson-Rubin Confidence Sets</h2>
+
+<h3>Description</h3>
+
+<p>This function calculates confidence sets for the parameter of interest in fuzzy regression discontinuity designs.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+FRD(
+  y,
+  d,
+  x,
+  By = 0,
+  Bt = 0,
+  alpha = 0.05,
+  cutoff = 0,
+  search.int,
+  subints = 3,
+  diagnostic.plot = FALSE,
+  eta = 1,
+  bw.equal = TRUE,
+  h = NA
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>y</code></td>
+<td>
+<p>Outcome</p>
+</td></tr>
+<tr valign="top"><td><code>d</code></td>
+<td>
+<p>Treatment status</p>
+</td></tr>
+<tr valign="top"><td><code>x</code></td>
+<td>
+<p>Running variable</p>
+</td></tr>
+<tr valign="top"><td><code>By</code></td>
+<td>
+<p>Bound on the second derivative of conditional expectation of the outcome function. It has to be positive. Default is zero.</p>
+</td></tr>
+<tr valign="top"><td><code>Bt</code></td>
+<td>
+<p>Bound on the second derivative of the conditional probability of the treatment function. It has to be positive. Default is zero.</p>
+</td></tr>
+<tr valign="top"><td><code>alpha</code></td>
+<td>
+<p>1-$\alpha$ is the confidence level of the confidence set.</p>
+</td></tr>
+<tr valign="top"><td><code>cutoff</code></td>
+<td>
+<p>Cutoff value of the running variable. Default is zero.</p>
+</td></tr>
+<tr valign="top"><td><code>search.int</code></td>
+<td>
+<p>The algorithm searches for the confidence set for the parameter of interest within this interval.</p>
+</td></tr>
+<tr valign="top"><td><code>subints</code></td>
+<td>
+<p>Number of subintervals to search for the roots. It has to be an integer and greater than two.</p>
+</td></tr>
+<tr valign="top"><td><code>diagnostic.plot</code></td>
+<td>
+<p>If TRUE, diagnostic plot of criterion function is drawn. Default is FALSE.</p>
+</td></tr>
+<tr valign="top"><td><code>eta</code></td>
+<td>
+<p>eta specifies a maximal bound on w^max to improve finite sample coverage. Default is 1.</p>
+</td></tr>
+<tr valign="top"><td><code>bw.equal</code></td>
+<td>
+<p>If FALSE, different bandwidths are used on each side of the cutoff. Default is TRUE.</p>
+</td></tr>
+<tr valign="top"><td><code>h</code></td>
+<td>
+<p>If specific value is chosen, Anderson Rubin confidence sets are calculated with fix bandwidth. Default is NA.</p>
+</td></tr>
+<tr valign="top"><td><code>tol</code></td>
+<td>
+<p>tol specifies which tolorance level to use to calculate confidence sets. Default is 10^-4</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>A vector is returned which entries are the boundaries of the confidence set.
+</p>
+
+
+<h3>Examples</h3>
+
+<pre>
+FRD(y=rnorm(100), d=rbinom(n=100, size=1, prob=0.5), x=rnorm(100), search.int=c(-1000,1000))
+</pre>
+
+<hr /><div style="text-align: center;">[Package <em>FRD</em> version 1.0.1 <a href="00Index.html">Index</a>]</div>
+</body></html>
